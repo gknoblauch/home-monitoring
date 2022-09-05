@@ -34,6 +34,12 @@ scrape_configs:
     static_configs:
       - targets: ["speedtest:9798"]
 
+  - job_name: 'airgradient'
+    metrics_path: /metrics
+    scrape_interval: 30s
+    static_configs:
+      - targets: ['IP_ADDRESS:9926']
+
   - job_name: "ping"
     metrics_path: /probe
     scrape_interval: 5s
